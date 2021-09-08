@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:background="@android:color/black"
             android:gravity="center"
-            android:text="CALCULATOR"
+            android:text="@string/calculator"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@android:color/white"
