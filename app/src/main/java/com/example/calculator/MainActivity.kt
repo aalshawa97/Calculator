@@ -59,20 +59,18 @@ class MainActivity : AppCompatActivity() {
                     cal_result.text = result.toString()
 
             } catch (e: Exception) {
-                Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
 
                 Log.d("EXCEPTION", "Message: ${e.message}")
             }
         }
     }
 
-    private fun appendVal(string: String, isClear: Boolean) {
-        if (isClear) {
-            cal_expression.text = ""
-            //     cal_result.text = ""
-            cal_expression.append(string)
-        } else {
-            cal_expression.append(string)
-        }
+    private fun appendVal(string: String, isClear: Boolean) = if (isClear) {
+        cal_expression.text = ""
+        //     cal_result.text = ""
+        cal_expression.append(string)
+    } else {
+        cal_expression.append(string)
     }
 }
